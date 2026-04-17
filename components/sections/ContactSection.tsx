@@ -5,10 +5,10 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
 const contacts = [
-  { icon: "📧", label: "Email", value: "your@email.com" },
-  { icon: "💼", label: "LinkedIn", value: "linkedin.com/in/yourprofile" },
+  { icon: "📧", label: "Email", value: "danyalkhan010@outlook.com" },
+  { icon: "💼", label: "LinkedIn", value: "https://www.linkedin.com/in/danyal-khan-a2a40795/" },
   { icon: "🐙", label: "GitHub", value: "github.com/DanyalKh" },
-  { icon: "📍", label: "Location", value: "Dubai, UAE" },
+  { icon: "📍", label: "Location", value: "Berlin, Germany" },
   { icon: "🌍", label: "Open to", value: "Relocation · English · German (A1/A2)" },
 ];
 
@@ -64,7 +64,7 @@ export function ContactSection() {
       </div>
       <p className="mx-auto mt-10 inline-flex items-center rounded-full border border-border px-4 py-2 text-sm text-muted">
         <span className="mr-2 h-2 w-2 rounded-full bg-green-500" />
-        Available for Opportunities · Senior AI Engineer · Dubai / Remote
+        Available for Opportunities · AI/ML Engineer · EU / Remote
       </p>
     </section>
   );
