@@ -34,7 +34,7 @@ export const skillCards = [
     title: "Python",
     years: 9,
     icon: "🐍",
-    color: "#10B981",
+    color: "#14B8A6",
     skills: [
       { name: "FastAPI", level: 95 },
       { name: "Django", level: 88 },
