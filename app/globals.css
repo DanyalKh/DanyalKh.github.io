@@ -4,7 +4,7 @@
   --background: #eeeef8;
   --foreground: #1a1a2e;
   --primary: #581c87;
-  --secondary: #d4a017;
+  --secondary: #aa8011;
   --card: #0f1117;
   --muted: #65657a;
   --border: rgba(124, 58, 237, 0.16);
@@ -13,8 +13,8 @@
 .dark {
   --background: #0a0a0f;
   --foreground: #f3f3ff;
-  --primary: #d4a017;
-  --secondary: #d4a017;
+  --primary: #aa8011;
+  --secondary: #aa8011;
   --card: #0f1117;
   --muted: #aaaacc;
   --border: rgba(143, 84, 245, 0.2);
