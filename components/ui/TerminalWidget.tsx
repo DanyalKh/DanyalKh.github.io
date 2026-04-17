@@ -60,7 +60,7 @@ export function TerminalWidget() {
       </div>
       <div className="min-h-44 space-y-2 px-4 py-4 font-mono text-sm">
         {visibleLines.map((line, index) => (
-          <p key={`${index}-${line}`}>{line}</p>
+          <p key={index}>{line}</p>
         ))}
         <span className="inline-block h-4 w-2 animate-pulse bg-[#8f54f5] align-middle" />
       </div>
