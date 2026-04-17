@@ -54,8 +54,6 @@ export const certifications = [
   "Google: Generative AI Leader",
   "DataCamp: Introduction to Airflow in Python",
   "DataCamp: Introduction to PySpark",
-  "DataCamp: Understanding Data Engineering",
-  "DataCamp: Introduction to Data Engineering",
   "DataCamp: Streamlined Data Ingestion with Pandas",
   "NED University: PHP and MySQL Certified Professional",
 ];
