@@ -1,9 +1,8 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { JourneySection } from "@/components/sections/JourneySection";
-import { EcosystemSection } from "@/components/sections/EcosystemSection";
-import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { AboutSection } from "@/components/sections/AboutSection";
+import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { TechStackSection } from "@/components/sections/TechStackSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Home() {
@@ -11,10 +10,9 @@ export default function Home() {
     <main>
       <Navbar />
       <HeroSection />
-      <JourneySection />
-      <EcosystemSection />
-      <ProjectsSection />
       <AboutSection />
+      <ProjectsSection />
+      <TechStackSection />
       <ContactSection />
     </main>
   );

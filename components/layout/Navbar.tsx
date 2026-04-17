@@ -4,7 +4,13 @@ import { useState } from "react";
 import { useTheme } from "next-themes";
 import { scrollToSection } from "@/lib/utils";
 
-const navItems = ["home", "journey", "ecosystem", "projects", "about", "contact"];
+const navItems = [
+  { id: "home", label: "Hero" },
+  { id: "about", label: "About" },
+  { id: "featured-projects", label: "Featured Projects" },
+  { id: "tech-stack", label: "Tech Stack" },
+  { id: "contact", label: "Contact" },
+];
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -13,16 +19,16 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <button type="button" className="text-lg font-bold text-primary" onClick={() => scrollToSection("home")}></button>
+        <button type="button" className="text-lg font-bold text-primary" onClick={() => scrollToSection("home")}>DANYAL KH</button>
         <nav className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (
-            <button key={item} type="button" className="text-xs font-semibold tracking-[0.2em] text-muted uppercase hover:text-foreground" onClick={() => scrollToSection(item)}>
-              {item}
+            <button key={item.id} type="button" className="text-xs font-semibold tracking-[0.14em] text-muted uppercase hover:text-foreground" onClick={() => scrollToSection(item.id)}>
+              {item.label}
             </button>
           ))}
         </nav>
         <div className="hidden items-center gap-3 md:flex">
-          <button type="button" className="rounded-full border border-primary px-4 py-2 text-xs font-semibold text-primary">Hire Me</button>
+          <button type="button" className="rounded-full border border-primary px-4 py-2 text-xs font-semibold text-primary" onClick={() => scrollToSection("contact")}>Contact</button>
           <button
             type="button"
             className="rounded-full border border-border p-2"
@@ -40,18 +46,18 @@ export function Navbar() {
         <div className="space-y-3 border-t border-border px-6 py-4 md:hidden">
           {navItems.map((item) => (
             <button
-              key={item}
+              key={item.id}
               type="button"
               className="block w-full text-left text-sm uppercase text-muted"
               onClick={() => {
-                scrollToSection(item);
+                scrollToSection(item.id);
                 setOpen(false);
               }}
             >
-              {item}
+              {item.label}
             </button>
           ))}
-          <button type="button" className="rounded-full border border-primary px-4 py-2 text-xs font-semibold text-primary">Hire Me</button>
+          <button type="button" className="rounded-full border border-primary px-4 py-2 text-xs font-semibold text-primary" onClick={() => scrollToSection("contact")}>Contact</button>
         </div>
       ) : null}
     </header>

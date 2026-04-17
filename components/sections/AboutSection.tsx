@@ -14,10 +14,14 @@ export function AboutSection() {
       <div className="mt-12 grid gap-8 lg:grid-cols-2">
         <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-6">
           <div className="inline-flex h-16 w-16 items-center justify-center rounded-xl bg-secondary text-3xl">🤖</div>
-          <p className="text-muted">I&apos;m a <strong className="text-foreground">Senior AI Engineer</strong> with 9+ years delivering production-grade ML systems, GenAI/RAG applications, and ERP-integrated data pipelines across the UAE, Europe, and South Asia.</p>
-          <p className="text-muted">Built LLM-powered workflows using LangChain & Gemini API, demand forecasting models, and high-volume FastAPI services that handle thousands of daily ERP transactions. Engineered Airflow/Spark pipelines that cut manual reporting time by 40%+.</p>
+          <p className="text-muted">
+            I build <strong className="text-foreground">LLM applications</strong> with LangChain, retrieval pipelines, and agent orchestration to solve production business workflows that require grounded answers and reliable automation.
+          </p>
+          <p className="text-muted">
+            My ML systems work spans demand forecasting, optimization, and API-first delivery through FastAPI microservices and orchestrated pipelines. I prioritize evaluation, monitoring, and guardrails so GenAI features remain stable and auditable in production.
+          </p>
           <div className="flex flex-wrap gap-2">
-            {["Applied ML Engineering", "MLOps", "Agentic Workflows", "GenAI & RAG", "LLM Applications", "ERP & API Integration"].map((item) => (
+            {["LLM Pipelines", "Agent-based Systems", "Prompt Engineering", "RAG Retrieval", "Evaluation & Monitoring", "FastAPI + ML Services"].map((item) => (
               <span key={item} className="rounded-full border border-border px-3 py-1 text-xs">{item}</span>
             ))}
           </div>
