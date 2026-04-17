@@ -17,7 +17,7 @@ export function HeroSection() {
               <span className="mr-2 h-2 w-2 animate-pulse rounded-full bg-green-500" />
               Senior AI Engineer · ML & GenAI · Open to Opportunities
             </p>
-            <h1 className="text-5xl font-extrabold leading-tight md:text-7xl">
+            <h1 className="text-5xl font-extrabold leading-tight md:text-4xl">
               <span>AI Engineer specializing in</span>
               <br />
               <span className="text-primary">LLMs, Generative AI, and scalable ML systems</span>
