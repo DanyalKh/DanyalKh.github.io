@@ -1,9 +1,30 @@
-export const skillCards = [
+export type CenterIcon = "ml" | "data" | "python" | "api" | "db" | "cloud";
+export type SkillLevel = "EXPERT" | "ADVANCED";
+
+type Skill = { name: string; level: number };
+type SkillCard = {
+  id: number;
+  title: string;
+  years: number;
+  level: SkillLevel;
+  icon: string;
+  centerIcon: CenterIcon;
+  description: string;
+  tech: string[];
+  color: string;
+  skills: Skill[];
+};
+
+export const skillCards: SkillCard[] = [
   {
     id: 1,
     title: "ML & GenAI",
     years: 4,
+    level: "EXPERT",
     icon: "🤖",
+    centerIcon: "ml",
+    description: "Designing and shipping AI assistants, RAG pipelines, and production-grade model workflows.",
+    tech: ["LangChain", "RAG", "LLMs", "TensorFlow"],
     color: "#3B82F6",
     skills: [
       { name: "LangChain", level: 90 },
@@ -18,7 +39,11 @@ export const skillCards = [
     id: 2,
     title: "Data Engineering",
     years: 5,
+    level: "ADVANCED",
     icon: "📊",
+    centerIcon: "data",
+    description: "Building resilient ETL systems, orchestration pipelines, and analytics-ready data platforms.",
+    tech: ["Airflow", "Spark", "ADF", "Pandas"],
     color: "#8B5CF6",
     skills: [
       { name: "Airflow", level: 88 },
@@ -33,7 +58,11 @@ export const skillCards = [
     id: 3,
     title: "Python",
     years: 9,
+    level: "EXPERT",
     icon: "🐍",
+    centerIcon: "python",
+    description: "Developing high-performance backend services, automation suites, and robust API architectures.",
+    tech: ["FastAPI", "Django", "Asyncio", "Pydantic"],
     color: "#14B8A6",
     skills: [
       { name: "FastAPI", level: 95 },
@@ -48,7 +77,11 @@ export const skillCards = [
     id: 4,
     title: "APIs & ERP",
     years: 9,
+    level: "EXPERT",
     icon: "⚡",
+    centerIcon: "api",
+    description: "Connecting enterprise systems through scalable APIs, ERP workflows, and process automation.",
+    tech: ["REST", "FastAPI", "ERPNext", "Frappe"],
     color: "#F59E0B",
     skills: [
       { name: "REST", level: 95 },
@@ -63,7 +96,11 @@ export const skillCards = [
     id: 5,
     title: "Databases",
     years: 9,
+    level: "EXPERT",
     icon: "🗄️",
+    centerIcon: "db",
+    description: "Designing optimized schemas, tuning query performance, and ensuring reliable data operations.",
+    tech: ["PostgreSQL", "MariaDB", "Redis", "MySQL"],
     color: "#EF4444",
     skills: [
       { name: "SQL", level: 95 },
@@ -78,7 +115,11 @@ export const skillCards = [
     id: 6,
     title: "Cloud & DevOps",
     years: 5,
+    level: "ADVANCED",
     icon: "☁️",
+    centerIcon: "cloud",
+    description: "Deploying secure cloud workloads with containers, observability, and dependable delivery flows.",
+    tech: ["Azure", "Docker", "CI/CD", "Datadog"],
     color: "#06B6D4",
     skills: [
       { name: "Azure", level: 85 },
