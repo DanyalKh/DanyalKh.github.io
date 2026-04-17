@@ -53,13 +53,13 @@ export function ContactSection() {
             </motion.div>
           ))}
         </div>
-        <form onSubmit={onSubmit} className="card-surface space-y-4 bg-[#0b0f19] p-6 font-mono text-white">
+        <form onSubmit={onSubmit} className="card-surface space-y-4 bg-white p-6 font-mono text-foreground dark:bg-[#0b0f19] dark:text-[#d8d8ff]">
           <p className="text-sm">● ● ● contact ~ terminal</p>
-          <label className="block text-sm">&gt; name:<input name="name" required className="mt-1 w-full border-b border-white/30 bg-transparent px-1 py-2 outline-none" /></label>
-          <label className="block text-sm">&gt; email:<input name="email" type="email" required className="mt-1 w-full border-b border-white/30 bg-transparent px-1 py-2 outline-none" /></label>
-          <label className="block text-sm">&gt; message:<textarea name="message" required rows={5} className="mt-1 w-full border border-white/30 bg-transparent px-2 py-2 outline-none" /></label>
+          <label className="block text-sm">&gt; name:<input name="name" required className="mt-1 w-full border-b border-border bg-transparent px-1 py-2 outline-none" /></label>
+          <label className="block text-sm">&gt; email:<input name="email" type="email" required className="mt-1 w-full border-b border-border bg-transparent px-1 py-2 outline-none" /></label>
+          <label className="block text-sm">&gt; message:<textarea name="message" required rows={5} className="mt-1 w-full border border-border bg-transparent px-2 py-2 outline-none" /></label>
           <button type="submit" className="w-full rounded-lg bg-primary py-3 font-semibold text-white">[ Send Message ↵ ]</button>
-          {status ? <p className="text-xs text-white/80">{status}</p> : null}
+          {status ? <p className="text-xs text-muted dark:text-white/80">{status}</p> : null}
         </form>
       </div>
       <p className="mx-auto mt-10 inline-flex items-center rounded-full border border-border px-4 py-2 text-sm text-muted">

@@ -14,7 +14,7 @@ export function EcosystemSection() {
       </div>
       <div className="mt-12 space-y-6">
         {ecosystemCategories.map((category, index) => (
-          <motion.div key={category.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.06 }} className="rounded-2xl border border-border bg-white/70 p-5 dark:bg-[#121621]">
+          <motion.div key={category.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.06 }} className="rounded-2xl border border-border border-l-4 border-l-purple-200 bg-white/70 p-5 dark:border-l-white/10 dark:bg-[#121621]">
             <p className="mb-4 font-semibold"><span className="mr-2">{category.icon}</span>{category.label}</p>
             <div className="flex flex-wrap gap-2">
               {category.tools.map((tool) => (
