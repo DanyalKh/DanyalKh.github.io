@@ -32,7 +32,7 @@ export function ProjectsSection() {
             <div className="space-y-4 p-5">
               <div className="flex items-center justify-between">
                 <p className="text-2xl">{project.icon}</p>
-                <span className="rounded-full border border-[#d4a017] px-2 py-1 text-[10px] font-semibold text-[#d4a017]">{project.badge}</span>
+                <span className="rounded-full border border-primary px-2 py-1 text-[10px] font-semibold text-primary">{project.badge}</span>
                 <span aria-hidden="true">↗</span>
               </div>
               <h3 className="text-lg font-semibold">{project.title}</h3>

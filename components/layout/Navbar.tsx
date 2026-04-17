@@ -13,7 +13,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <button type="button" className="text-lg font-bold text-[#d4a017]" onClick={() => scrollToSection("home")}></button>
+        <button type="button" className="text-lg font-bold text-primary" onClick={() => scrollToSection("home")}></button>
         <nav className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (
             <button key={item} type="button" className="text-xs font-semibold tracking-[0.2em] text-muted uppercase hover:text-foreground" onClick={() => scrollToSection(item)}>
@@ -22,7 +22,7 @@ export function Navbar() {
           ))}
         </nav>
         <div className="hidden items-center gap-3 md:flex">
-          <button type="button" className="rounded-full border border-[#d4a017] px-4 py-2 text-xs font-semibold text-[#d4a017]">Hire Me</button>
+          <button type="button" className="rounded-full border border-primary px-4 py-2 text-xs font-semibold text-primary">Hire Me</button>
           <button
             type="button"
             className="rounded-full border border-border p-2"
@@ -51,7 +51,7 @@ export function Navbar() {
               {item}
             </button>
           ))}
-          <button type="button" className="rounded-full border border-[#d4a017] px-4 py-2 text-xs font-semibold text-[#d4a017]">Hire Me</button>
+          <button type="button" className="rounded-full border border-primary px-4 py-2 text-xs font-semibold text-primary">Hire Me</button>
         </div>
       ) : null}
     </header>

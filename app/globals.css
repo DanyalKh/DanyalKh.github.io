@@ -3,7 +3,7 @@
 :root {
   --background: #eeeef8;
   --foreground: #1a1a2e;
-  --primary: #3b0764;
+  --primary: #581c87;
   --secondary: #d4a017;
   --card: #0f1117;
   --muted: #65657a;
@@ -50,8 +50,7 @@ body {
 }
 
 .card-surface {
-  background: var(--card);
-  @apply rounded-2xl border border-white/10 shadow-[0_10px_30px_rgba(15,17,23,0.24)];
+  @apply rounded-2xl border border-purple-200/80 bg-white shadow-[0_10px_30px_rgba(15,17,23,0.24)] dark:border-white/10 dark:bg-[#0f1117];
 }
 
 .dot-grid {

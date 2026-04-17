@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Timeline } from "@/components/ui/Timeline";
+import { certifications, education } from "@/data/timeline";
 
 export function AboutSection() {
   return (
@@ -19,6 +20,24 @@ export function AboutSection() {
             {["Applied ML Engineering", "MLOps", "Agentic Workflows", "GenAI & RAG", "LLM Applications", "ERP & API Integration"].map((item) => (
               <span key={item} className="rounded-full border border-border px-3 py-1 text-xs">{item}</span>
             ))}
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {education.map((item) => (
+              <div key={item.degree} className="rounded-xl border border-border bg-white/60 p-4 dark:bg-[#141824]">
+                <p className="font-semibold">{item.degree}</p>
+                <p className="text-sm text-muted">{item.institution}</p>
+                <p className="text-sm text-muted">{item.location}</p>
+              </div>
+            ))}
+          </div>
+          <div className="overflow-x-auto pb-2">
+            <div className="flex min-w-max gap-2">
+              {certifications.map((certification) => (
+                <span key={certification} className="rounded-full border border-border bg-white/70 px-3 py-1 text-xs dark:bg-[#141824]">
+                  {certification}
+                </span>
+              ))}
+            </div>
           </div>
         </motion.div>
         <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>

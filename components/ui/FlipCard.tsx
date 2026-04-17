@@ -26,16 +26,16 @@ export function FlipCard({ title, years, icon, color, skills }: FlipCardProps) {
           flipped ? "[transform:rotateY(180deg)]" : ""
         } group-hover:[transform:rotateY(180deg)]`}
       >
-        <div className="card-surface absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-white [backface-visibility:hidden]">
+        <div className="card-surface absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-foreground dark:text-white [backface-visibility:hidden]">
           <span className="text-4xl">{icon}</span>
           <h3 className="text-xl font-semibold">{title}</h3>
-          <p className="text-xs tracking-[0.2em] text-white/70">{years} YEARS EXPERIENCE</p>
+          <p className="text-xs tracking-[0.2em] text-muted dark:text-white/70">{years} YEARS EXPERIENCE</p>
         </div>
-        <div className="card-surface absolute inset-0 space-y-2 p-4 text-left text-white [backface-visibility:hidden] [transform:rotateY(180deg)]">
+        <div className="card-surface absolute inset-0 space-y-2 p-4 text-left text-foreground dark:text-white [backface-visibility:hidden] [transform:rotateY(180deg)]">
           {skills.map((skill) => (
             <SkillBar key={skill.name} name={skill.name} level={skill.level} color={color} />
           ))}
-          <p className="pt-2 text-center text-xs text-white/60">← Tap to flip</p>
+          <p className="pt-2 text-center text-xs text-muted dark:text-white/60">← Tap to flip</p>
         </div>
       </div>
     </button>
