@@ -50,7 +50,7 @@ body {
 }
 
 .card-surface {
-  @apply rounded-2xl border border-purple-200/80 bg-white shadow-[0_10px_30px_rgba(15,17,23,0.24)] dark:border-white/10 dark:bg-[#0f1117];
+  @apply rounded-2xl bg-[#0a0a14] shadow-[0_10px_30px_rgba(0,0,0,0.5)];
 }
 
 .dot-grid {
