@@ -30,12 +30,14 @@ export function AboutSection() {
               </div>
             ))}
           </div>
-          <div className="overflow-x-auto pb-2">
-            <div className="flex min-w-max gap-2">
+          <div>
+            <h3 className="mb-3 text-sm font-semibold tracking-wider text-primary uppercase">Certifications</h3>
+            <div className="grid gap-2 sm:grid-cols-2">
               {certifications.map((certification) => (
-                <span key={certification} className="rounded-full border border-border bg-white/70 px-3 py-1 text-xs dark:bg-[#141824]">
-                  {certification}
-                </span>
+                <div key={certification} className="flex items-start gap-2 rounded-lg border border-border bg-white/80 p-3 text-sm dark:bg-[#141824]">
+                  <span className="text-primary">✓</span>
+                  <span className="flex-1">{certification}</span>
+                </div>
               ))}
             </div>
           </div>
