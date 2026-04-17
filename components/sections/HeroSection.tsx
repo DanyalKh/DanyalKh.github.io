@@ -5,6 +5,9 @@ import { TerminalWidget } from "@/components/ui/TerminalWidget";
 import { scrollToSection } from "@/lib/utils";
 
 export function HeroSection() {
+  // TODO: Replace with actual hosted resume URL/PDF once available in /public.
+  const resumeUrl: string | null = null;
+
   return (
     <section id="home" className="dot-grid">
       <div className="section-shell">
@@ -15,20 +18,34 @@ export function HeroSection() {
               Senior AI Engineer · ML & GenAI · Open to Opportunities
             </p>
             <h1 className="text-5xl font-extrabold leading-tight md:text-7xl">
-              <span>Building</span>
+              <span>AI Engineer specializing in</span>
               <br />
-              <span className="text-primary">Intelligent Systems</span>
+              <span className="text-primary">LLMs, Generative AI, and scalable ML systems</span>
             </h1>
             <p className="max-w-2xl text-lg text-muted">
-              9+ years delivering production-grade ML systems, GenAI/RAG applications, and ERP-integrated data pipelines. Built LLM-powered workflows that boosted recurring revenue by 20%. Python · LangChain · FastAPI · Airflow · Spark · Azure.
+              I design and ship production LLM pipelines, agent-based systems, and reliable ML services that automate high-value workflows end-to-end.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button type="button" className="rounded-full bg-primary px-6 py-3 font-semibold text-white" onClick={() => scrollToSection("journey")}>
-                Explore My Journey ↓
+              <button type="button" className="rounded-full bg-primary px-6 py-3 font-semibold text-white" onClick={() => scrollToSection("featured-projects")}>
+                View Projects
               </button>
-              <button type="button" className="rounded-full border border-primary px-6 py-3 font-semibold text-primary" onClick={() => scrollToSection("projects")}>
-                VIEW PROJECTS
-              </button>
+              <a
+                href="https://github.com/DanyalKh"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-primary px-6 py-3 font-semibold text-primary"
+              >
+                GitHub
+              </a>
+              {resumeUrl ? (
+                <a href={resumeUrl} target="_blank" rel="noreferrer" className="rounded-full border border-primary px-6 py-3 font-semibold text-primary">
+                  Resume
+                </a>
+              ) : (
+                <button type="button" disabled className="cursor-not-allowed rounded-full border border-border px-6 py-3 font-semibold text-muted">
+                  Resume (TODO)
+                </button>
+              )}
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>

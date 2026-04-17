@@ -1,14 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-
-type Project = {
-  title: string;
-  icon: string;
-  badge: string;
-  highlights: string[];
-  stack: string[];
-};
+import type { Project } from "@/data/projects";
 
 type ProjectModalProps = {
   project: Project | null;
@@ -45,8 +38,16 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
             <div className="space-y-6">
               <div>
-                <h4 className="mb-2 text-sm font-semibold tracking-[0.2em] text-primary">ARCHITECTURE</h4>
-                <pre className="overflow-x-auto rounded-xl bg-purple-50 p-4 font-mono text-sm text-muted dark:bg-black/40 dark:text-white/80">{`// Architecture diagram coming soon`}</pre>
+                <h4 className="mb-2 text-sm font-semibold tracking-[0.2em] text-primary">PROBLEM</h4>
+                <p className="text-sm text-foreground/85 dark:text-white/85">{project.problem}</p>
+              </div>
+              <div>
+                <h4 className="mb-2 text-sm font-semibold tracking-[0.2em] text-primary">SOLUTION</h4>
+                <p className="text-sm text-foreground/85 dark:text-white/85">{project.solution}</p>
+              </div>
+              <div>
+                <h4 className="mb-2 text-sm font-semibold tracking-[0.2em] text-primary">OUTCOME</h4>
+                <p className="text-sm text-foreground/85 dark:text-white/85">{project.outcome}</p>
               </div>
               <div>
                 <h4 className="mb-2 text-sm font-semibold tracking-[0.2em] text-primary">KEY HIGHLIGHTS</h4>
@@ -66,6 +67,23 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                   ))}
                 </div>
               </div>
+              {project.githubUrl || project.demoUrl ? (
+                <div>
+                  <h4 className="mb-2 text-sm font-semibold tracking-[0.2em] text-primary">LINKS</h4>
+                  <div className="flex flex-wrap gap-3">
+                    {project.githubUrl ? (
+                      <a href={project.githubUrl} target="_blank" rel="noreferrer" className="rounded-full border border-border px-3 py-1 text-xs hover:border-primary">
+                        GitHub
+                      </a>
+                    ) : null}
+                    {project.demoUrl ? (
+                      <a href={project.demoUrl} target="_blank" rel="noreferrer" className="rounded-full border border-border px-3 py-1 text-xs hover:border-primary">
+                        Demo
+                      </a>
+                    ) : null}
+                  </div>
+                </div>
+              ) : null}
             </div>
           </motion.div>
         </motion.div>
