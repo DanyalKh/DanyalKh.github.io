@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --background: #eeeef8;
+  --foreground: #1a1a2e;
+  --primary: #7c3aed;
+  --secondary: #d4a017;
+  --card: #0f1117;
+  --muted: #65657a;
+  --border: rgba(124, 58, 237, 0.16);
+}
+
+.dark {
+  --background: #0a0a0f;
+  --foreground: #f3f3ff;
+  --primary: #8f54f5;
+  --secondary: #d4a017;
+  --card: #0f1117;
+  --muted: #aaaacc;
+  --border: rgba(143, 84, 245, 0.2);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-6xl px-6 py-20 md:py-24;
+}
+
+.section-badge {
+  @apply mx-auto inline-flex items-center rounded-full border border-border px-3 py-1 text-xs font-semibold tracking-[0.2em] text-muted;
+}
+
+.card-surface {
+  background: var(--card);
+  @apply rounded-2xl border border-white/10 shadow-[0_10px_30px_rgba(15,17,23,0.24)];
+}
+
+.dot-grid {
+  background-image: radial-gradient(rgba(124, 58, 237, 0.18) 0.6px, transparent 0.6px);
+  background-size: 16px 16px;
+}
