@@ -3,7 +3,7 @@
 :root {
   --background: #eeeef8;
   --foreground: #1a1a2e;
-  --primary: #d4a017;
+  --primary: #3b0764;
   --secondary: #d4a017;
   --card: #0f1117;
   --muted: #65657a;
@@ -13,7 +13,7 @@
 .dark {
   --background: #0a0a0f;
   --foreground: #f3f3ff;
-  --primary: #8f54f5;
+  --primary: #d4a017;
   --secondary: #d4a017;
   --card: #0f1117;
   --muted: #aaaacc;
