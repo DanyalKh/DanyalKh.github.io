@@ -24,7 +24,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "DevJourney | Danyal Khan",
+  title: "Danyal Khan",
   description: "Senior AI Engineer portfolio — ML, GenAI, RAG, and ERP-integrated systems.",
 };
 
